@@ -1,0 +1,40 @@
+.app {
+  width: 100vw;
+  border: 1px solid #888;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  @include sm {
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-between;
+
+    h2 {
+      margin-left: 1rem;
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+
+    @include sm {
+      flex-direction: row;
+      margin-right: 1rem;
+    }
+  }
+
+  button {
+    border: none;
+    background-color: #ccc;
+    margin: 0.25rem;
+    padding: 0.5rem 1rem;
+    color: darkblue;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
