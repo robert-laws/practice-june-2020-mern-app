@@ -1,19 +1,19 @@
 // MEDIA QUERIES
 
 // smartphone (portrait view)
-$screen-xs-min: 768px;
+$screen-xs-min: 600px;
 
 // small tablets and large smartphones (landscape view)
-$screen-sm-min: 1000px;
+$screen-sm-min: 768px;
 
 // small tablets (portrait view)
-$screen-md-min: 1200px;
+$screen-md-min: 900px;
 
 // tablets and small desktops
-$screen-lg-min: 1450px;
+$screen-lg-min: 1024px;
 
 // large desktops
-$screen-xl-min: 1600px;
+$screen-xl-min: 1200px;
 
 // extra-small devices
 @mixin xs {
