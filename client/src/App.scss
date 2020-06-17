@@ -1,10 +1,12 @@
 // ABSTRACTS
 
-@import '../sass/abstracts/typography';
-@import '../sass/mixins/mixins';
+@import 'sass/abstracts/typography';
+@import 'sass/mixins/mixins';
 
 // BASE
-@import '../sass/base/base';
+@import 'sass/base/base';
 
 // COMPONENTS
-@import '../sass/components/app';
+@import 'sass/components/app';
+@import 'sass/components/user';
+@import 'sass/components/places';
