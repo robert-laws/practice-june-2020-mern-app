@@ -5,7 +5,7 @@ const UsersList = ({ users }) => {
   if (users.length === 0) {
     return (
       <div className='users-list'>
-        <p>No Users Found</p>
+        <p className='no-users'>No Users Found</p>
       </div>
     );
   }

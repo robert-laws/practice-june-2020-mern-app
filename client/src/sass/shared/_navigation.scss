@@ -1,0 +1,80 @@
+.main-header {
+  min-height: 80px;
+  width: 100%;
+  background-color: #c1eff7;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @include lg {
+      flex-direction: row;
+    }
+  }
+
+  img {
+    width: 100px;
+  }
+
+  @include lg {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .title {
+    color: #005272;
+    text-decoration: none;
+
+    @include lg {
+      margin-left: 2rem;
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    a {
+      color: #47a0c4;
+      text-decoration: none;
+      font-size: 1.45rem;
+      font-weight: bold;
+      margin: 0.5rem 1rem;
+
+      &:first-child {
+        margin-top: 1rem;
+      }
+
+      @include lg {
+        margin: 0 1rem;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+
+      &.active {
+        color: #005272;
+      }
+    }
+
+    @include lg {
+      flex-direction: row;
+
+      a {
+        &:last-child {
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+}

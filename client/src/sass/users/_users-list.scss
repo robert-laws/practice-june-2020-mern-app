@@ -3,4 +3,16 @@
     list-style: none;
     margin: 1rem 0;
   }
+
+  .no-users {
+    text-align: center;
+    width: 300px;
+    border-radius: 0.5rem;
+    padding: 1.5rem 1rem;
+    margin: 1.5rem;
+    color: #fff;
+    border: 1px solid #bcc6c9;
+    background-color: #0691b4;
+    box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.35);
+  }
 }
