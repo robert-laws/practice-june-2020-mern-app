@@ -22,6 +22,7 @@ const Users = () => {
 
   return (
     <div className='users'>
+      <h2>All Users</h2>
       <UsersList users={USERS} />
     </div>
   );

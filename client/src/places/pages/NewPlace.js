@@ -2,8 +2,8 @@ import React from 'react';
 
 const NewPlace = () => {
   return (
-    <div>
-      <p>New Place</p>
+    <div className='new-place'>
+      <h2>New Place</h2>
     </div>
   );
 };
