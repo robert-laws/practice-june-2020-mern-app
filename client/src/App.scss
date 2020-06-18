@@ -6,7 +6,13 @@
 // BASE
 @import 'sass/base/base';
 
-// COMPONENTS
-@import 'sass/components/app';
-@import 'sass/components/user';
-@import 'sass/components/places';
+// SHARED
+@import 'sass/shared/app';
+
+// USERS
+@import 'sass/users/users';
+@import 'sass/users/users-list';
+@import 'sass/users/user-item';
+
+// PLACES
+@import 'sass/places/places';
