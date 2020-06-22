@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useEffect } from 'react';
 
 import { validate } from '../../util/validators';
 
@@ -30,6 +30,7 @@ const Input = ({
   placeholder,
   errorText,
   validators,
+  onInput,
   rows = 3,
 }) => {
   const [inputState, dispatch] = useReducer(inputReducer, {
@@ -37,6 +38,12 @@ const Input = ({
     isTouched: false,
     isValid: false,
   });
+
+  const { value, isValid, isTouched } = inputState;
+
+  useEffect(() => {
+    onInput(id, value, isValid);
+  }, [id, value, isValid, onInput]);
 
   const handleChange = (event) => {
     dispatch({ type: 'CHANGE', payload: event.target.value, validators });
@@ -54,7 +61,7 @@ const Input = ({
         placeholder={placeholder}
         onChange={handleChange}
         onBlur={handleBlur}
-        value={inputState.value}
+        value={value}
       />
     ) : (
       <textarea
@@ -62,19 +69,19 @@ const Input = ({
         rows={rows}
         onChange={handleChange}
         onBlur={handleBlur}
-        value={inputState.value}
+        value={value}
       />
     );
 
   return (
     <div
       className={`form-control ${
-        !inputState.isValid && inputState.isTouched && 'form-control--invalid'
+        !isValid && isTouched && 'form-control--invalid'
       }`}
     >
       <label htmlFor={id}>{label}</label>
       {formElement}
-      {!inputState.isValid && inputState.isTouched && <p>{errorText}</p>}
+      {!isValid && isTouched && <p>{errorText}</p>}
     </div>
   );
 };
