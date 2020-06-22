@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../../shared/components/FormElements/Button';
 
 const PlaceItem = ({ place }) => {
   const {
@@ -22,9 +23,9 @@ const PlaceItem = ({ place }) => {
         </div>
       </div>
       <div className='actions'>
-        <button>View on Map</button>
-        <button>Edit</button>
-        <button>Delete</button>
+        <Button>View on Map</Button>
+        <Button to={`/places/${id}`}>Edit</Button>
+        <Button>Delete</Button>
       </div>
     </li>
   );

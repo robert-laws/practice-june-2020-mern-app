@@ -1,0 +1,21 @@
+.button {
+  font: inherit;
+  font-size: 1.4rem;
+  padding: 1rem 1.75rem;
+  border: 1px solid #ff0055;
+  border-radius: 4px;
+  background: #ff0055;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0 2rem;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background: lighten($color: #ff0055, $amount: 40%);
+    color: #000;
+  }
+}

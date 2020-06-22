@@ -39,7 +39,7 @@ const UserPlaces = () => {
   return (
     <div className='places'>
       <h2>User Places</h2>
-      <PlaceList places={loadedPlaces} />;
+      <PlaceList places={loadedPlaces} />
     </div>
   );
 };
