@@ -60,19 +60,21 @@ const UpdatePlace = () => {
   const identifiedPlace = PLACES.find((p) => p.id === placeId);
 
   useEffect(() => {
-    setFormData(
-      {
-        title: {
-          value: identifiedPlace.title,
-          isValid: true,
+    if (identifiedPlace) {
+      setFormData(
+        {
+          title: {
+            value: identifiedPlace.title,
+            isValid: true,
+          },
+          description: {
+            value: identifiedPlace.description,
+            isValid: true,
+          },
         },
-        description: {
-          value: identifiedPlace.description,
-          isValid: true,
-        },
-      },
-      true
-    );
+        true
+      );
+    }
     setLoaded(true);
   }, [setFormData, identifiedPlace]);
 
@@ -83,7 +85,7 @@ const UpdatePlace = () => {
 
   if (!identifiedPlace) {
     return (
-      <div className='update-place'>
+      <div className='new-place'>
         <h2>Could Not Find Place</h2>
       </div>
     );
