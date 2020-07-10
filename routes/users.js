@@ -1,4 +1,5 @@
 const express = require('express');
+const HttpError = require('../models/http-error');
 
 const TEMP_USERS = [
   {
@@ -24,6 +25,12 @@ router.get('/:id', (req, res, next) => {
   const user = TEMP_USERS.find((user) => {
     return user.id === userId;
   });
+
+  if (!user) {
+    return next(
+      new HttpError('Could not find a user for the provided id.', 404)
+    );
+  }
 
   res.json({ user });
 });
